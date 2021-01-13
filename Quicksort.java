@@ -1,4 +1,4 @@
-public class QuickSort 
+public class Quicksort 
 { 
     /* This function takes an array and its lowest and highest index as input 
     and returns index of the pivot element in the array. The funcion places element of the array greater than
@@ -50,7 +50,7 @@ public class QuickSort
         int arr[] = {10, 7, 8, 9, 1, 5}; 
         int n = arr.length; 
   
-        QuickSort object = new QuickSort(); 
+        Quicksort object = new Quicksort(); 
         object.qsort(arr, 0, n - 1); 
   
         System.out.println("sorted array"); 
