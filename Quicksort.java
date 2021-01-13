@@ -45,9 +45,11 @@ public class Quicksort
         System.out.println(); 
     } 
   
+    //Driver code
+    
     public static void main(String args[])     // For performing the Quicksort algorithm on given array of finite length
     { 
-        int arr[] = {10, 7, 8, 9, 1, 5}; 
+        int arr[] = {10, 7, 8, 9, 1, 5};       // assign an array of your choice
         int n = arr.length; 
   
         Quicksort object = new Quicksort(); 
