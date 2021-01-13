@@ -3,7 +3,6 @@ public class Quicksort
     /* This function takes an array and its lowest and highest index as input 
     and returns index of the pivot element in the array. The funcion places element of the array greater than
     the pivot element to the right of the pivot and elements lesser than the pivot to the left */
-    
     int partition(int arr[], int low, int high) 
     { 
         int pivot = arr[high]; // We set pivot element to be the element at the end of the array or with highest index
@@ -19,25 +18,26 @@ public class Quicksort
             } 
         } 
   
-        int a = arr[i+1];        // Swap arr[high] with arr[i]
-        arr[i+1] = arr[high]; 
+        int a = arr[i + 1];        // Swap arr[high] with arr[i + 1]
+        arr[i + 1] = arr[high]; 
         arr[high] = a; 
   
-        return i+1;              // Return positional index of the pivot element
+        return i + 1 ;              // Return positional index of the pivot element
     } 
   
-  
+    // This function performs partition function recursively
     void qsort(int arr[], int low, int high) 
     { 
         if (low < high) 
         { 
-            int pseudopivot = partition(arr, low, high);     // Recursively perform Quicksort on the partitions
+            int pseudopivot = partition(arr, low, high);     // Recursively perform partition on the resultant arrays
             qsort(arr, low, pseudopivot - 1); 
             qsort(arr, pseudopivot + 1, high); 
         } 
     } 
   
-    static void printArray(int arr[])              // For printing the elements of the array
+    // For printing the elements of the array
+    static void printArray(int arr[])              
     { 
         int n = arr.length; 
         for (int i = 0; i < n; ++i) 
