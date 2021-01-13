@@ -31,9 +31,9 @@ public class Quicksort
     { 
         if (low < high) 
         { 
-            int pi = partition(arr, low, high);     // Recursively perform Quicksort on the partitions
-            qsort(arr, low, pi - 1); 
-            qsort(arr, pi + 1, high); 
+            int pseudopivot = partition(arr, low, high);     // Recursively perform Quicksort on the partitions
+            qsort(arr, low, pseudopivot - 1); 
+            qsort(arr, pseudopivot + 1, high); 
         } 
     } 
   
@@ -46,7 +46,6 @@ public class Quicksort
     } 
   
     //Driver code
-    
     public static void main(String args[])     // For performing the Quicksort algorithm on given array of finite length
     { 
         int arr[] = {10, 7, 8, 9, 1, 5};       // assign an array of your choice
